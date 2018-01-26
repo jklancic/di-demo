@@ -10,14 +10,13 @@ import xyz.blackmonster.services.GreetingService;
 public class SetterInjectedController {
 	
 	private GreetingService greetingService;
-	
-	public String sayHello() {
+
+	public String sayHello(){
 		return greetingService.sayGreeting();
 	}
 
 	@Autowired
-	@Qualifier("setterGreetingService")
-	public void setGreetingService(GreetingService greetingService) {
+	public void setGreetingService(@Qualifier("setterGreetingService") GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 }

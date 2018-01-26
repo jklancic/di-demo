@@ -18,6 +18,6 @@ public class ConstructorInjectedControllerTest {
 	
 	@Test
 	public void testGreeting() throws Exception {
-		assertEquals(GreetingServiceImpl.HELLO, constructorInjectedController.sayHello());
+		assertEquals(GreetingServiceImpl.HELLO_GURUS, constructorInjectedController.sayHello());
 	}
 }
