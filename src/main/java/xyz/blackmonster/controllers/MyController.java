@@ -1,7 +1,5 @@
 package xyz.blackmonster.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import xyz.blackmonster.services.GreetingService;
@@ -13,9 +11,8 @@ import xyz.blackmonster.services.GreetingService;
 public class MyController {
 
     private GreetingService greetingService;
-
-    @Autowired
-    public MyController(@Qualifier("greetingServiceImpl") GreetingService greetingService) {
+    
+    public MyController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

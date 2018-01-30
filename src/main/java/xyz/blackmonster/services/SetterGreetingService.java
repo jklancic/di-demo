@@ -7,6 +7,6 @@ public class SetterGreetingService implements GreetingService {
 	
 	@Override
 	public String sayGreeting() {
-		return "Hello (Injected by the getter)";
+		return "Hello (Injected by the setter)";
 	}
 }

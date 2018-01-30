@@ -11,7 +11,6 @@ import xyz.blackmonster.controllers.PropertyInjectedController;
 import xyz.blackmonster.controllers.SetterInjectedController;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"xyz.blackmonster.controllers", "xyz.blackmonster.services"})
 public class DiDemoApplication {
 
 	public static void main(String[] args) {
