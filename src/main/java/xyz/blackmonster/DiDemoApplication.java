@@ -9,6 +9,7 @@ import xyz.blackmonster.controllers.ConstructorInjectedController;
 import xyz.blackmonster.controllers.MyController;
 import xyz.blackmonster.controllers.PropertyInjectedController;
 import xyz.blackmonster.controllers.SetterInjectedController;
+import xyz.blackmonster.fake.FakeDataSource;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -18,9 +19,8 @@ public class DiDemoApplication {
 
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		System.out.println(controller.hello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+		
+		System.out.println(fakeDataSource.getUsername());
 	}
 }
