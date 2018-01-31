@@ -1,0 +1,36 @@
+# this is a comment
+
+name: John
+
+names: # anything from the # symbol on will be ignored in the same
+    - John
+    - Paul
+    - Ringo
+    
+pound_sign: "#"
+
+book:
+    author: Joe Buck
+    publicher: US publication
+    
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no # No, false, FALSE
+
+string_val: "This is its's quote" # Quotes are needed to allow special characters like ' or :
+
+colon_string: "my courses: one two three"
+
+include_new_lines: | # | is needed to keep the new lines
+  this is
+  it for now,
+  or is it?
+
+ignore_new_lines: > # > is needed to ignore new lines and return this in one line
+  this is
+  it for now,
+  or is it?
