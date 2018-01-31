@@ -10,6 +10,7 @@ import xyz.blackmonster.controllers.MyController;
 import xyz.blackmonster.controllers.PropertyInjectedController;
 import xyz.blackmonster.controllers.SetterInjectedController;
 import xyz.blackmonster.fake.FakeDataSource;
+import xyz.blackmonster.fake.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -22,5 +23,9 @@ public class DiDemoApplication {
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		
 		System.out.println(fakeDataSource.getUsername());
+
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+		
+		System.out.println(fakeJmsBroker.getUsername());
 	}
 }
