@@ -3,3 +3,15 @@ app:
     username: JMS Username
     password: Pa$$word
     url: 127.0.0.1:5050
+
+# --- in YAML defines a "new file"
+---
+
+# defining the profile instead of creating a separate YAML file
+spring:
+  profiles: de
+
+# overriding the values for de profile
+app:
+  jms:
+    username: JMS Hans in Deutsch
